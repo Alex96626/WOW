@@ -107,6 +107,23 @@ body {
     font-family:Calibri, sans-serif;
 }
 
+.blur {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #010101d4;
+    z-index: 10;
+}
+
+.blur--active {
+    display: block;
+}
+
 .button {
     width: max-content;
     /* height: 74px; */
@@ -150,7 +167,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 28px 60px;
+    padding: 28px 30px 28px 60px;
     /* margin-bottom: 91px; */
 }
 
@@ -189,7 +206,7 @@ body {
     grid-template-rows: repeat(2, 1fr);
     /* gap: 31px; */
     margin-left: auto;
-    margin-right: 66px;
+    margin-right: 50px;
 }
 
 .admin__tel {
@@ -233,31 +250,60 @@ body {
     margin-left: 26px;
 }
 
-.header__nav {
-   width: 32px;
+.header-button__open-menu{
+    z-index: 11;
 }
 
-.nav__button {
-    width: 32px;
+.burger-menu {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
+.burger-menu--active {
+    transform: rotate(45deg);
+}
+
+.burger-menu__line {
+    fill:none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke:var(--dark-blue);
+    stroke-width:5.5;
+    stroke-linecap:round;
+}
+
+.burger-menu__line-top {
+    stroke-dasharray: 40 139;
+}
+.burger-menu__line-bottom {
+    stroke-dasharray: 40 180;
+}
+
+.burger-menu--active .burger-menu__line {
+    stroke: var(--white);
+}
+
+.burger-menu--active .burger-menu__line-top {
+    stroke-dashoffset: -98px;
+}
+
+.burger-menu--active .burger-menu__line-bottom {
+    stroke-dashoffset: -138px;
+}
+  
 /* main  */
 
 /* banner  */
-
-
-
-.banner {
-    
-    /* margin-bottom: var(--main-indent); */
-    
-}
 
 .banner__list {
     position: relative;
     padding-bottom: calc(var(--main-indent) * 2);
     padding-top: 91px;
-    background: url(images/vzhik.png) no-repeat 100% calc(100% - var(--main-indent));
+    background:url(images/vzhik.png) no-repeat  100% calc(100% - var(--main-indent)), url(images/grid.png) no-repeat 0% 0%;
 }
 
 .banner__item {

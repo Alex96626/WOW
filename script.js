@@ -1,37 +1,50 @@
-// document.addEventListener("DOMContentLoaded", () => {
-//    const inputTelephoneList = document.querySelectorAll('input[type="tel"]')
+document.addEventListener("DOMContentLoaded", () => {
+    //маска для input tel
+    const inputTelephoneList = document.querySelectorAll('input[type="tel"]');
+    inputTelephoneList.forEach( (elem)=> {
+        elem.addEventListener("input", mask, false);
+        elem.focus();
+        setCursorPosition(3, elem);
+    })
 
-//    inputTelephoneList.forEach((e) => {
-//         console.log(e)
-//         e.maxLength = 18
-//         e.value = '+7 (___) ___ __ __'
-//         // добавялем + в начало номера
-//         // e.addEventListener('focus', () => {
-//         //     if(e.value.length  === 0){
-//         //         e.value+='+'
-//         //     } 
-//         // })
-//         inputValueList = e.value.split('').filter((e)=> {return e !== ' '})
-//         console.log(inputValueList)
-//         e.addEventListener('input', (elem) => {
-//             console.log(e.target)   
-//         })
+    // menu active
+    const menu = document.querySelector('.header-button__open-menu')
+    const blur = document.querySelector('.blur')
+    menu.addEventListener('click', (event) => {
+        menu.classList.toggle('burger-menu--active')
+        blur.classList.toggle('blur--active')
+    })
+});
 
-//         // e.addEventListener('input', () => {
-//         //     switch(e.value.length) {
-//         //         case 2: 
-//         //             e.value +='(';
-//         //             break;
-//         //         case 6:
-//         //             e.value +=')';
-//         //             break;
-//         //         case 10:
-//         //             e.value +='_';
-//         //             break;
-//         //         case 13:
-//         //             e.value +='_';
-//         //             break;
-//         //     }
-//         // })
-//     })
-// });
+
+
+function setCursorPosition(pos, e) {
+    e.focus();
+    if (e.setSelectionRange) e.setSelectionRange(pos, pos);
+    else if (e.createTextRange) {
+      var range = e.createTextRange();
+      range.collapse(true);
+      range.moveEnd("character", pos);
+      range.moveStart("character", pos);
+      range.select()
+    }
+}
+
+function mask(e) {
+    let matrix = this.placeholder,// .defaultValue
+        i = 0,
+        def = matrix.replace(/\D/g, ""),
+        val = this.value.replace(/\D/g, "");
+    def.length >= val.length && (val = def);
+    matrix = matrix.replace(/[_\d]/g, function(a) {
+        return val.charAt(i++) || "_"
+    });
+    this.value = matrix;
+    i = matrix.lastIndexOf(val.substr(-1));
+    i < matrix.length && matrix != this.placeholder ? i++ : i = matrix.indexOf("_");
+    setCursorPosition(i, this)
+}
+  
+    
+    
+   
