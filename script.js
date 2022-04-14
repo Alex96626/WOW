@@ -14,6 +14,27 @@ document.addEventListener("DOMContentLoaded", () => {
         menu.classList.toggle('burger-menu--active')
         blur.classList.toggle('blur--active')
     })
+
+    // slider
+
+    const swiper = new Swiper('.swiper', {
+        // loop: true,
+        slidesPerView: 1,
+        
+        breakpoints: {
+            // when window width is >= 375px
+            375: {
+              slidesPerView: 2,
+              spaceBetween: 20
+            },
+            // when window width is >= 1110px
+            1250: {
+              slidesPerView: 3,
+              spaceBetween: 22
+            },
+          }
+        
+      });
 });
 
 
