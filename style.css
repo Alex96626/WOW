@@ -500,7 +500,11 @@ body {
 .director-image {
     position: absolute;
     top: 0;
-    right: 100px
+    right: 100px;
+    width: 344px;
+    height: 613px;
+    overflow: hidden;
+    border-radius: 10px 10px 0px 0px;
 }
 
 /* feedback */
