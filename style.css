@@ -302,7 +302,8 @@ body {
     position: relative;
     padding-bottom: calc(var(--main-indent) * 2);
     padding-top: 91px;
-    background:url(images/vzhik.png) no-repeat  100% calc(100% - var(--main-indent)), url(images/grid.png) no-repeat 0% 0%;
+    background: url(images/grid.png) no-repeat 0% 0%;
+    /* background:url(images/vzhik.png) no-repeat  100% calc(100% - var(--main-indent)), url(images/grid.png) no-repeat 0% 0%; */
 }
 
 .banner__item {
@@ -449,6 +450,7 @@ body {
 
 .about-service__box {
     padding: 0;
+    padding-bottom: var(--main-indent);
 }
 
 /* .about-service__for-government {
@@ -479,27 +481,34 @@ body {
 }
 
 .hello-section__wrapper {
-    padding: 66px 101px;
+    padding: 95px 101px 86px 101px;
     border-radius: 50px;
     background: var(--light-grey);
 }
 
 .hello-section__title {
     width: 486px;
-    margin-bottom: 29px;
-    font-size: 64px;
+    margin-bottom: 23px;
+    font-size: var(--title-h3);
+    font-weight: 900;
     line-height: 1;
     color: var(--dark-blue);
     
 }
 
 .hello-section__sub-title {
+    width: 495px;
+    max-width: 100%;
+    margin-bottom: 60px;
+    font-size: 20px;
     font-weight: 700;
+    line-height: 1.1;
+    color: var(--dark-blue);
 }
 
 .director-image {
     position: absolute;
-    top: 0;
+    top: -15px;
     right: 100px;
     width: 344px;
     height: 613px;
@@ -706,6 +715,47 @@ body {
     margin-top: 0;
 }
 
+.director {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap:10px ;
+    margin-top: var(--main-indent);
+    padding: 42px 105px;
+    border-radius: 50px;
+    background:var(--light-grey) ;
+}
+
+.director__wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.director__name {
+    font-size: 34px;
+    line-height: 1.1;
+    color: var(--dark-blue);
+}
+
+.director__post {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.8;
+    color: var(--dark-blue);
+}
+
+.director__phone {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--dark-blue);
+}
+
+.director__email {
+    font-size: 28px;
+    color: var(--dark-blue);
+}
+
+
 /* partners */
 
 .partners {
@@ -722,13 +772,16 @@ body {
 
 /* box-dev */
 .about-service__content {
-    padding: 120px 41px 120px 101px;
+    padding: 113px 41px 120px 101px;
     border-radius: 50px;
 }
 
 .box-dev__content {
-    background: url(images/box.png)  var(--light-grey) no-repeat calc(100% - 40px) center;
+    background: url(images/33-01\ 1.png) no-repeat,  var(--light-grey) no-repeat calc(100% - 40px) center;
+    background-size: 597px, 283px ;   
+    background-position:right calc(100% - 70px); 
 }
+
 
 .box-dev__sub-title {
     font-size: 24px;
@@ -744,7 +797,7 @@ body {
 .footer__container {
     display: grid;
     grid-template-columns: repeat(12, minmax(75px, 1fr));
-    grid-template-rows: repeat(59, 20px);
+    grid-template-rows: repeat(38, 20px);
     grid-row-gap: 2px;
     grid-column-gap:20px ;
 }
@@ -756,38 +809,43 @@ body {
 
 .footer__nav_gos {
     grid-column: 1/6;
-    grid-row: 12/31;
+    grid-row: 12/26;
     align-self: center;
 }
 
 .footer__nav_typography {
     grid-column: 1/6;
-    grid-row: 32/44;
-    /* align-self: end; */
+    grid-row: 28/37;
+    align-self: end;
 }
 
 .footer__nav_other {
-    grid-column: 1/6;
-    grid-row: 45/48;
+    grid-column: 9/12;
+    grid-row: 25/31;
     align-self: end;
 }
 
 .footer__nav_table {
-    grid-column: 1/6;
-    grid-row:49/57 ;
+    grid-column: 6/9;
+    grid-row:22/31 ;
 }
 
 .footer__nav_design {
     grid-column: 6/9;
-    grid-row: 13/51;
+    grid-row: 10/20;
     align-self: end;
 }
 
-.footer__nav_polygraphy {
+.footer__nav_printing {
+    grid-column: 9/12;
+    grid-row: 10/23; 
+}
+
+/* .footer__nav_polygraphy {
     grid-column:9/12 ;
     grid-row: 13/51 ;
     align-self: end;
-}
+} */
 
 .footer__nav_link {
     font-size: 24px;
@@ -815,7 +873,7 @@ body {
     display: flex;
     flex-direction: column;
     grid-column: 6/9;
-    grid-row: 1/10;
+    grid-row: 1/18
 }
 
 .footer__feedback_title {
@@ -838,7 +896,7 @@ body {
 
 .social {
     grid-column: 6/9;
-    grid-row:54/58 ;
+    grid-row:33/37 ;
 }
 
 .social__title {
@@ -899,10 +957,10 @@ body {
     border-radius: 3px;
 }
 
-.footer__image {
+/* .footer__image {
     grid-column: 9/13;
     grid-row: 1/10;
-}
+} */
 
 .agreements {
     display: flex;
@@ -910,7 +968,7 @@ body {
     justify-content: space-between;
     height: 100%;
     grid-column: 9/13;
-    grid-row: 54/56;
+    grid-row: 33/36;
 }
 
 .agreements__item {
@@ -921,7 +979,7 @@ body {
 
 .footer__company {
     grid-column: 9/11;
-    grid-row: 58/59;
+    grid-row: 37/39;
     font-size: 18px;
     line-height: 1.1;
     color: var(--dark-grey);
