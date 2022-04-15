@@ -786,6 +786,21 @@ body {
     margin-top: 61px;
 }
 
+.partners__item {
+    position: relative;
+}
+
+.partners__item:hover .partners__img-active {
+    opacity: 1;
+}
+
+.partners__img-active {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
 /* box-dev */
 .about-service__content {
     padding: 113px 41px 120px 101px;

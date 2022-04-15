@@ -16,7 +16,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // slider
 
     const swiper = new Swiper('.swiper', {
-        // loop: true,
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false
+        },
+        loop:true,
         slidesPerView: 1,
         
         breakpoints: {
@@ -30,9 +34,9 @@ document.addEventListener("DOMContentLoaded", () => {
               slidesPerView: 3,
               spaceBetween: 22
             },
-          }
+        }
         
-      });
+    });
 });
 
 
