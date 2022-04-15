@@ -452,7 +452,7 @@ body {
 
 .about-service__box {
     padding: 0;
-    padding-bottom: var(--main-indent);
+    /* padding-bottom: var(--main-indent); */
 }
 
 .about-service__for-government {
