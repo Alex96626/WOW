@@ -3,8 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const inputTelephoneList = document.querySelectorAll('input[type="tel"]');
     inputTelephoneList.forEach( (elem)=> {
         elem.addEventListener("input", mask, false);
-        elem.focus();
-        setCursorPosition(3, elem);
     })
 
     // menu active
