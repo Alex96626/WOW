@@ -391,7 +391,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    padding: 30px 30px 43px 38px;
+    padding: 30px 40px 43px 40px;
     border-radius: 50px;
     background: var(--white);
 }
@@ -456,6 +456,7 @@ body {
 }
 
 .about-service__for-government {
+    background:var(--light-grey);
     text-align: center;
 }
 
@@ -510,6 +511,13 @@ body {
     font-weight: 700;
     line-height: 1.1;
     color: var(--dark-blue);
+}
+
+.hello-section__button {
+    height: 100%;
+    padding: 29px 69px;
+    background-color: var(--pink);
+    color: var(--white);
 }
 
 .director-image {
@@ -1652,11 +1660,13 @@ animation: textSelection 1.5s linear forwards;
         --title-h1: 40px;
         --title-h2: 36px;
         --title-h3: 24px;
-        --sub-title: 14px;
+        --sub-title: 16px;
         --button-text: 16px;
     
          /* отступы */
         --main-indent: 60px;
+
+        --main-border-radius: 20px
     
     }
 
@@ -1706,6 +1716,7 @@ animation: textSelection 1.5s linear forwards;
 
     .banner__list {
         padding-bottom: var(--main-indent);
+        background: none;
     }
 
     .banner__sub-title {
@@ -1717,39 +1728,76 @@ animation: textSelection 1.5s linear forwards;
     }
 
     .banner__text {
-        width:200px ;
-        font-size: 10px;
+        width:220px ;
+        font-size: 12px;
+    }
+
+    .banner__button {
+        width: 200px;
+        height: 53px;
+        padding: 0;
     }
 
     .services {
         margin-bottom: 0;
     }
 
+    .service {
+        border-radius: var(--main-border-radius);
+    }
+
     .about-service__sub-title {
-        margin: 11px 0;
+        margin: 20px 0;
+    }
+
+    .about-service__button {
+        width: 200px;
+        height: 53px;
+        padding: 0;
     }
 
     .about-service__for-government {
         margin-bottom: 0;
-        padding-bottom: var(--main-indent)
+        padding-bottom: var(--main-indent);
+        margin-bottom: var(--main-indent);
     }
+
     .hello-section__content {
-        width: 100%;
+        width: 300px;
+    }
+
+    .hello-section__wrapper {
+        padding: 24px 40px 35px 40px;
     }
 
     .hello-section__title {
         width: 100%;
+        margin-bottom: 24px;
         font-size: 24px;
+        text-align: center;
     }
 
     .hello-section__sub-title {
         width: 100%;
+        margin-bottom: 25px;
         font-size: 16px;
+        text-align: center;
+    }
+
+    .hello-section__button {
+        width: 200px;
+        height: 53px;
+        padding: 0;
     }
 
     .director-image {
         width: 212px;
         height: 378px;
+    }
+
+    .feedback__sub-title {
+        width: 257px;
+        margin: 0 auto;
     }
 
     .feedback__form {
@@ -1762,9 +1810,13 @@ animation: textSelection 1.5s linear forwards;
     }
 
     .feedback__button {
-        /* width: 300px;
-        height: 60px; */
+         width: 300px;
+        height: 60px;
         margin-top:27px ;
+    }
+
+    .payment {
+        background: none;
     }
 
     .payment__list {
@@ -1772,19 +1824,20 @@ animation: textSelection 1.5s linear forwards;
     }
 
     .payment__info {
+
         font-size: 22px;
     }
 
     .payment_item {
         height: 269px;
-        padding: 146px 0 0 0;
+        padding: 146px 22px 0 22px;
         background-size:267px 118px;
     }
 
     .delivery__item {
         padding-top: 110px;
         background-position: 50% 0;
-        background-size: 114px 82px;
+        background-size: 40%;
     }
     
     .delivery__method {
@@ -1800,6 +1853,10 @@ animation: textSelection 1.5s linear forwards;
     .delivery__link {
         width: 100%;
         font-size: 16px;
+    }
+
+    .special-offer {
+        background: none;
     }
 
     .special-offer__section-title {
@@ -1844,6 +1901,10 @@ animation: textSelection 1.5s linear forwards;
         margin-top: 33px;
     }
 
+    .partners {
+        margin-top: var(--main-indent);
+    }
+
     .partners__list {
         flex-wrap: wrap;
         gap: 30px 0;
@@ -1882,7 +1943,8 @@ animation: textSelection 1.5s linear forwards;
     }
 
     .box-dev__content {
-        padding-bottom: 186px;
+        padding: 55px 40px 186px 40px;
+        /* padding-bottom: 186px; */
         background-position: 50% calc(100% - 25px);
     }
 
@@ -1902,6 +1964,12 @@ animation: textSelection 1.5s linear forwards;
         /* min-height: 34px; */
         line-height: 1;
         margin: 5px 0;
+    }
+
+    .footer__feedback_button {
+        width: 300px;
+        height: 60px;
+        padding: 0;
     }
     
 
