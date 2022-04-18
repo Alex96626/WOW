@@ -1788,6 +1788,15 @@ animation: textSelection 1.5s linear forwards;
         width: 200px;
         height: 53px;
         padding: 0;
+        margin: 0 auto;
+    }
+
+    .hello-section__content::after {
+        border-radius: var(--main-border-radius);
+    }
+
+    .grid-fon {
+        background: none;
     }
 
     .director-image {
@@ -1812,10 +1821,11 @@ animation: textSelection 1.5s linear forwards;
     .feedback__button {
          width: 300px;
         height: 60px;
-        margin-top:27px ;
+        margin-top:0 ;
     }
 
     .payment {
+        padding-bottom: var(--main-indent);
         background: none;
     }
 
@@ -1852,6 +1862,7 @@ animation: textSelection 1.5s linear forwards;
 
     .delivery__link {
         width: 100%;
+        padding-right: 15px;
         font-size: 16px;
     }
 
@@ -1867,15 +1878,23 @@ animation: textSelection 1.5s linear forwards;
     .special-offer__sub-title {
         margin: 20px 0 ;
         font-size: 16px;
+        text-align: center;
     }
 
     .special-offer__text {
-        width: 100%;
+        width: 300px;
+        margin: 0 auto;
         font-size: 16px;
+        text-align: center;
     }
 
     .special-offer__wrapper {
         gap: 20px;
+    }
+
+    .feedback__form_special-offer {
+        gap: 20px;
+        margin-top: 0;
     }
 
     .director {
