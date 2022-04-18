@@ -20,14 +20,16 @@ document.addEventListener("DOMContentLoaded", () => {
             delay: 2000,
             disableOnInteraction: false
         },
+        
         loop:true,
         slidesPerView: 1,
         
         breakpoints: {
             // when window width is >= 375px
-            375: {
-              slidesPerView: 2,
-              spaceBetween: 20
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            //   window: 320
             },
             // when window width is >= 1110px
             1250: {

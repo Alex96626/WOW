@@ -826,9 +826,11 @@ body {
 
 .footer__container {
     display: grid;
-    grid-template-columns: repeat(12, minmax(75px, 1fr));
+    /* grid-template-columns: repeat(12, minmax(75px, 1fr)); */
+    grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
     /* row-gap: 10px; */
-    grid-template-rows: repeat(25, 34px);
+    grid-template-rows: repeat(25, minmax(34px, 1fr));
+    /* grid-template-rows: repeat(auto-fill, minmax(34px, 1fr)); */
     /* grid-row-gap: 2px; */
     grid-column-gap:20px ;
 }
@@ -1226,9 +1228,9 @@ animation: textSelection 1.5s linear forwards;
         padding-top: var(--main-indent);
         padding-bottom: 426px ;
         /* background: url(images/vzhik.png) no-repeat 50% calc(100% - 80px), url(images/grid.png) no-repeat 0% 0%; */
-        background-image:url(images/vzhik.png), url(images/grid.png) ;
-        background-repeat: no-repeat, no-repeat;
-        background-position: 50% calc(100% - 80px), 0% 0%;
+        /* background-image:url(images/vzhik.png), url(images/grid.png) ; */
+        background-repeat: no-repeat;
+        background-position: 0%;
         background-size: auto, contain;
     }
 
@@ -1640,5 +1642,259 @@ animation: textSelection 1.5s linear forwards;
 
 
 }
+
+/* 425px */
+@media (max-width: 425px) {
+
+    :root {
+        
+        /* font-size  */
+        --title-h1: 40px;
+        --title-h2: 36px;
+        --title-h3: 24px;
+        --sub-title: 14px;
+        --button-text: 16px;
+    
+         /* отступы */
+        --main-indent: 60px;
+    
+    }
+
+    .button {
+        font-size: var(--button-text);
+    }
+
+    .container {
+        width: 365px;
+    }
+
+    .header {
+        padding: 11px 20px 0px 20px;
+    }
+
+    .logo {
+        margin-right: 14px;
+    }
+
+    .logo svg {
+        width: 50px;
+        height: 50px;
+    }
+
+    .header__company-name_title {
+        font-size: 20px;
+    }
+
+    .header__company-name_text {
+        font-size: 14px;
+    }
+
+    .admin__tel {
+        width: 24px;
+        height: 24px;
+        background-size: cover;
+    }
+
+    .admin__tel::after {
+        width: 24px;
+        height: 24px;
+    }
+
+    .burger-menu {
+        width: 49px;
+    }
+
+    .banner__list {
+        padding-bottom: var(--main-indent);
+    }
+
+    .banner__sub-title {
+        font-size:16px;
+    }
+
+    .banner__title {
+        margin: 15px 0;
+    }
+
+    .banner__text {
+        width:200px ;
+        font-size: 10px;
+    }
+
+    .services {
+        margin-bottom: 0;
+    }
+
+    .about-service__sub-title {
+        margin: 11px 0;
+    }
+
+    .about-service__for-government {
+        margin-bottom: 0;
+        padding-bottom: var(--main-indent)
+    }
+    .hello-section__content {
+        width: 100%;
+    }
+
+    .hello-section__title {
+        width: 100%;
+        font-size: 24px;
+    }
+
+    .hello-section__sub-title {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .director-image {
+        width: 212px;
+        height: 378px;
+    }
+
+    .feedback__form {
+        margin-top: 19px;
+    }
+
+    .feedback__input {
+        width: 300px;
+        max-height: 60px;
+    }
+
+    .feedback__button {
+        /* width: 300px;
+        height: 60px; */
+        margin-top:27px ;
+    }
+
+    .payment__list {
+        margin-top: 36px;
+    }
+
+    .payment__info {
+        font-size: 22px;
+    }
+
+    .payment_item {
+        height: 269px;
+        padding: 146px 0 0 0;
+        background-size:267px 118px;
+    }
+
+    .delivery__item {
+        padding-top: 110px;
+        background-position: 50% 0;
+        background-size: 114px 82px;
+    }
+    
+    .delivery__method {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .delivery__info {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .delivery__link {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .special-offer__section-title {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .special-offer__sub-title {
+        margin: 20px 0 ;
+        font-size: 16px;
+    }
+
+    .special-offer__text {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .special-offer__wrapper {
+        gap: 20px;
+    }
+
+    .director {
+        flex-wrap: wrap;
+        padding: 46px 20px 46px 42px ;
+    }
+
+    .director__img  {
+        flex: 1 103px;
+        max-width: 103px;
+
+    }
+
+    .director__wrapper {
+        flex: 2 147px;
+        max-width: 147px;
+        margin-right: 0;
+    }
+
+    .director__wrapper:last-child {
+        flex:  100%;
+        max-width: 100%;
+        margin-top: 33px;
+    }
+
+    .partners__list {
+        flex-wrap: wrap;
+        gap: 30px 0;
+    }
+
+    .partners__item img {
+        height: 100%;
+    }
+
+    .partners__item:nth-child(1) {
+        width: 127px;
+        height: 42px;
+    }
+
+    .partners__item:nth-child(2) {
+        
+        width: 87px;
+        height: 43px;
+        order: 2;
+    }
+
+    .partners__item:nth-child(3) {
+        width: 155px;
+        height: 40px;
+    }   
+
+    .partners__item:nth-child(4) {
+        width: 69px;
+        height: 43px;
+    }
+
+    .partners__item:nth-child(5) {
+        width: 85px;
+        height: 43px;
+        order: 5;
+    }
+
+    .box-dev__content {
+        padding-bottom: 186px;
+        background-position: 50% calc(100% - 25px);
+    }
+
+    .box-dev__sub-title {
+        width: 100%;
+        font-size: 16px;
+    }
+
+
+
+}
+
+
 
 
