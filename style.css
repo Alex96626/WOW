@@ -1891,6 +1891,22 @@ animation: textSelection 1.5s linear forwards;
         font-size: 16px;
     }
 
+    .footer__container {
+        /* grid-template-rows: repeat(auto-fill, minmax(34px, 1fr)); */
+        display: flex;
+        flex-direction: column;
+        gap: 34px;
+    }
+
+    .footer__nav_item {
+        /* min-height: 34px; */
+        line-height: 1;
+        margin: 5px 0;
+    }
+    
+
+
+
 
 
 }
