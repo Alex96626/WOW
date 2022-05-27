@@ -2,6 +2,12 @@
 /* 325px */
 @media (min-width: 325px) {
 
+    body {
+        font-size: 100%;
+        -webkit-text-size-adjust: 100%;
+             -ms-text-size-adjust: 100%;
+    }
+
     * {
         margin: 0;
         padding: 0;
