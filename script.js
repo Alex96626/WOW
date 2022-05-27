@@ -7,38 +7,82 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // menu active
     const menu = document.querySelector('.header-button__open-menu')
-    const blur = document.querySelector('.blur')
+    const burgerMenuContent = document.querySelector('.burger-menu__content')
+    const body = document.querySelector('body')
     menu.addEventListener('click', (event) => {
         menu.classList.toggle('burger-menu--active')
-        blur.classList.toggle('blur--active')
+        burgerMenuContent.classList.toggle('burger-menu__content--active')
+        body.classList.toggle('body-overflow')
     })
 
-    // slider
-
-    const swiper = new Swiper('.swiper', {
-        autoplay: {
-            delay: 2000,
-            disableOnInteraction: false
-        },
-        
-        loop:true,
-        slidesPerView: 1,
-        
-        breakpoints: {
-            // when window width is >= 375px
-            320: {
-              slidesPerView: 1,
-              spaceBetween: 20,
-            //   window: 320
-            },
-            // when window width is >= 1110px
-            1250: {
-              slidesPerView: 3,
-              spaceBetween: 22
-            },
+    // прилипание бургера при скроле
+        // console.log(menu.scrollTop)
+    document.addEventListener('scroll', function() {
+        if (window.pageYOffset >= 50) {
+            menu.classList.add('header-button__open-menu--scroll')
         }
+        else {
+            menu.classList.remove('header-button__open-menu--scroll')
+        }
+    })
+
+    // отправка письма 
+
+    const feedbackForm = document.querySelector('.feedback__form')
+    feedbackForm.addEventListener('submit', (event) => {
+        event.preventDefault()
+        const phone = feedbackForm.querySelector('.feedback__input_phone').value
+        const mail = feedbackForm.querySelector('.feedback__input_email').value
+        const paramsString = {
+            phone,
+            mail
+        }
+        const urlParams = new URLSearchParams(paramsString).toString()
+        fetch('/hendler/form-hendler.php?' + urlParams)
+        .then( () => {
+            feedbackForm.querySelector('.feedback__input_phone').value = ''
+            feedbackForm.querySelector('.feedback__input_email').value = ''
+            // console.log('письмо успешно отправленно')
+            showMassageSentModal()
+        })
+    })
+
+    // письмо отправленно
+    const massageSent = document.querySelector('.massage-sent')
+    const showMassageSentModal =  () => {
+        massageSent.classList.add('massage-sent--active')
+        setTimeout( () => {
+            massageSent.classList.remove('massage-sent--active')
+        }, 5000)
+    }
+
+    // slidera
+//    window.addEventListener('resize', () => {
+        if(window.screen.availWidth > 1199) {
         
-    });
+            var swiper = new Swiper(".services", {
+                slidesPerView: 2,
+                spaceBetween: 67,
+               
+
+              });
+        }
+
+        if(window.screen.availWidth > 1199) {
+        
+            var swiper = new Swiper(".partners-swiper", {
+                slidesPerView: 3,
+                spaceBetween: 50,
+                loop: true,
+                autoplay: {
+                    delay: 1000,
+                },
+              });
+        }
+    // })
+    
+   
+
 });
 
 
