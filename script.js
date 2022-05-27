@@ -1,4 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
+
+    const viewPort = document.querySelector('.viewPort')
+    viewPort.innerHTML = window.screen.availWidth;
+
     //маска для input tel
     const inputTelephoneList = document.querySelectorAll('input[type="tel"]');
     inputTelephoneList.forEach( (elem)=> {
