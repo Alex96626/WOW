@@ -62,17 +62,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // slidera
 //    window.addEventListener('resize', () => {
-        if(window.screen.availWidth > 1199) {
+        if(document.documentElement.clientWidth > 767) {
         
             var swiper = new Swiper(".services", {
                 slidesPerView: 2,
                 spaceBetween: 67,
+                arrow: true,
+                navigation: {
+                    nextEl: '.service-nav__next',
+                    prevEl: '.service-nav__prev',
+                  },
                
 
               });
         }
 
-        if(window.screen.availWidth > 1199) {
+        if(document.documentElement.clientWidth > 767) {
         
             var swiper = new Swiper(".partners-swiper", {
                 slidesPerView: 3,

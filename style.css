@@ -591,6 +591,10 @@
         border-radius: var(--main-border-radius);
     }
 
+    .service-nav {
+        display: none;
+    }
+
     .service__title {
         display: flex;
         align-items: center;
@@ -647,7 +651,7 @@
 
     .about-service__for-government {
         padding: 74px 0 86px 0;
-        margin-bottom: var(--main-indent);
+        /* margin-bottom: var(--main-indent); */
         background: var(--light-grey);
         text-align: center;
     }
@@ -679,6 +683,10 @@
     }
 
     /* hello-section */
+
+    .hello-section {
+        padding-top: var(--main-indent);
+    }
 
     .hello-section__content {
         position: relative;
@@ -1395,7 +1403,7 @@
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
 
     :root {
 
@@ -1517,6 +1525,12 @@
 
     /* banner  */
 
+    .banner {
+        background: url(images/grid.png) no-repeat;
+        background-position: 50% 50px;
+        background-size: 996px 772px;
+    }
+
     .banner__list {
         padding-top: 110px;
     }
@@ -1544,8 +1558,32 @@
     }
 
     .services {
-        width: 707px;
+        position: relative;
+        width: 767px;
+        padding:  0 30px;
     }
+
+    .service-nav {
+        display: block;
+        position: absolute;
+        top: calc(50% - (var(--main-indent) / 2));
+        transform: translateY(-50%);
+        width: 20px;
+        height: 40px;
+        /* background: red; */
+        z-index: 1;
+        cursor: pointer;
+    }
+
+    .service-nav__prev {
+        left: 0;
+    }
+
+    .service-nav__next {
+        right: 0;
+    }
+
+
 
     .services__list {
         flex-direction: row;
@@ -1566,7 +1604,7 @@
         height: 74px;
     }
 
-    .about-service__for-government {
+    .out-service__for-governmentab {
         padding-bottom: 102px;
     }
 
@@ -1584,6 +1622,12 @@
         width: auto;
         height: 613px;
         /* flex: 1; */
+    }
+
+    .hello-section {
+        background: url(images/grid.png) no-repeat;
+        background-position: 50% 0;
+        background-size: 998px 772px;
     }
 
     .hello-section__wrapper {
