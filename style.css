@@ -1905,5 +1905,191 @@
 
 }
 
+@media (min-width: 1216px) {
+
+    :root {
+
+        /* font-size  */
+        --title-h1:7.0625em; /*113px*/ 
+        --title-h2: 4rem; /*64px*/ 
+        --title-h3: 2.25rem; /*36px*/ 
+        --sub-title: 1.5rem; /*24px*/ 
+        --button-text: 1.25rem; /*24px*/ 
+    
+            /* отступы */
+        --main-indent: 160px;
+        
+                
+    }
+
+    .container {
+        width: 1216px;
+    }
+    
+    .header {
+        width: 1216px;
+        justify-content: start;
+        align-items: center;
+        padding-top: 18px;
+    }
+
+    .header__company-name {
+        flex-direction: row;
+        align-items: center;
+        padding-left: 33px;
+    }
+
+    .header__company-name_title {
+        font-size: 32px;
+        margin-right: 16px;
+    }
+
+    .header__company-name_text {
+        font-size: 36px;
+    }
+
+    .admin {
+        margin: 0 0 0 auto;
+        padding-right: 91px;
+    }
+
+    .header-button__open-menu {
+        top: 16px;
+        right: -23px;
+    }
+
+    .banner__title {
+        margin-top: 0;
+        margin-bottom: 37px;
+        line-height: 0.9;
+    }
+
+    .banner__title span::after {
+        height: 88%;
+    }
+
+    .banner__text {
+        margin-bottom: 54px;
+        font-size: 24px;
+    }
+
+    .services {
+        width: 1166px;
+    }
+
+    .about-service__for-government {
+        padding-bottom:103px;
+        padding-top: 86px;
+    }
+
+    .about-service__for-government .section-title {
+        width: 856px;
+        margin: 0 auto;
+    }
+
+    .about-service__sub-title {
+        margin-top: 69px;
+    }
+
+    .hello-section__content {
+        width: 962px;
+    }
+
+    .payment__list {
+        flex-direction: row;
+    }
+
+    .delivery__list {
+        flex-direction: row;
+        justify-content: start;
+    }
+
+    .delivery__item {
+        padding-top: 152px;
+        background-position:  0 0;
+    }
+
+    .delivery__item:nth-child(2) .delivery__info {
+        width:550px ;
+    }
+
+    .director__wrapper:last-child {
+        flex: auto;
+        margin-top: 0;
+    }
+
+    .footer__container {
+        height: 900px;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .footer__container {
+        column-gap:  0;
+        row-gap: 22px;
+        padding: 0;
+    }
+
+    .footer__nav {
+        width: 28.8%;
+        flex: 0;
+    }
+
+    .footer__nav_documentation, .footer__nav_gos,
+    .footer__nav_typography {
+        width: 42.4%;
+    }
+
+    .footer__nav_documentation {
+        padding-top: 20px;
+    }
+
+    .footer__feedback {
+        flex: 0;
+        align-items: flex-end;
+        width: max-content;
+        margin: 0 auto 38px 0;
+    }
+
+    .footer__feedback_title {
+        margin-top: 0;
+        line-height: 1;
+    }
+
+    .footer__feedback_button {
+        width: 290px;
+        height: 74px;
+    }
+
+    .social, .agreements, .footer__company {
+        flex: 0;
+        padding:0;
+        width: auto;
+    }
+    
+    .footer__nav_other {
+        order: 6;
+    }
+
+    .footer__nav_printing {
+        order: 8;
+    }
+
+    .footer__nav_list--printing {
+        padding-top: 210px;
+    }
+
+    .social {
+        order: 7;
+        padding-top: 70px;
+    }
+
+    .footer__nav_table {
+        order: 9;
+    }
+
+    
+}
+
 
 

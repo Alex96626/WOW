@@ -1,8 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    const viewPort = document.querySelector('.viewPort')
-    viewPort.innerHTML = document.documentElement.clientWidth;
-
     //маска для input tel
     const inputTelephoneList = document.querySelectorAll('input[type="tel"]');
     inputTelephoneList.forEach( (elem)=> {
@@ -72,6 +69,17 @@ document.addEventListener("DOMContentLoaded", () => {
                     nextEl: '.service-nav__next',
                     prevEl: '.service-nav__prev',
                   },
+                breakpoints: {
+                    // when window width is >= 320px
+                    767: {
+                      slidesPerView: 2,
+                      spaceBetween: 67
+                    },
+                    1215: {
+                        slidesPerView: 3,
+                        spaceBetween: 67
+                      },
+                } 
                
 
               });
@@ -86,6 +94,17 @@ document.addEventListener("DOMContentLoaded", () => {
                 autoplay: {
                     delay: 1000,
                 },
+                breakpoints: {
+                    // when window width is >= 320px
+                    767: {
+                      slidesPerView: 3,
+                      spaceBetween: 50
+                    },
+                    1215: {
+                        slidesPerView: 5,
+                        spaceBetween: 50
+                      },
+                } 
               });
         }
     // })
