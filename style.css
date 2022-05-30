@@ -1147,6 +1147,7 @@
     .footer{
         padding-top: 30px;
         background-color: var(--light-blue);
+        padding-bottom: 40px;
     }
 
     .footer__container {
@@ -1511,7 +1512,7 @@
     }
 
     .header-button__open-menu {
-        top: 49px;
+        top: 28px;
         right: -20px;
     }
 
