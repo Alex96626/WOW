@@ -102,7 +102,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     },
                     1215: {
                         slidesPerView: 5,
-                        spaceBetween: 50
+                        spaceBetween: 50,
+                        loop: false,
                       },
                 } 
               });

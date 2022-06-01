@@ -891,6 +891,7 @@
         font-size: 28px;
         background: var(--white) no-repeat;
         background-position: center 32px;
+        background-size:267px 118px ;
         color: var(--dark-blue);
         text-align: left;
     }
@@ -1579,6 +1580,15 @@
         z-index: 1;
         cursor: pointer;
     }
+    .service-nav path {
+        transition: fill 1s;
+    }
+
+    .service-nav:hover path {
+        fill: radial-gradient(circle, rgba(131,62,62,1) 52%, rgba(157,84,84,1) 100%);;
+    }
+
+    
 
     .service-nav__prev {
         left: 0;
@@ -2013,6 +2023,7 @@
     }
 
     .payment_item {
+        padding-bottom: 80px;
         background-size: 346px 145px;
     }
 
