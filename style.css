@@ -108,7 +108,7 @@
         font-style: normal;
         font-weight: 700;
         font-display: swap;
-        src: local("Calibri"),
+        src: 
              url("fonts/calibri_bold.woff2") format("woff2"),
              url("fonts/calibri_bold.woff") format("woff"),
              url("fonts/calibri_bold.ttf") format("truetype");    
@@ -141,7 +141,11 @@
     .sub-title {
         font-size: var(--sub-title);
         color: var(--dark-blue);
-      }
+    }
+
+    .sub-title--pink {
+        color: var(--pink);
+    }
     
     .burger-menu__content {
         display: none;
@@ -1663,12 +1667,12 @@
         padding: 25px 35px;
     }
 
-    .feedback__input:nth-child(1) {
+    /* .feedback__input:nth-child(1) {
         order: 2;
-    }
+    } */
 
     .feedback__input:nth-child(2) {
-        order: 1;
+        /* order: 1; */
         flex: 1 100%;
         max-width: 376px;
     }
@@ -1991,12 +1995,25 @@
         margin-top: 69px;
     }
 
+    .hello-section {
+        background-size: 1216px 772px;
+        background-position: 364px 0;
+    }
+
     .hello-section__content {
         width: 962px;
     }
 
+    .feedback__sub-title {
+        width: 100%;
+    }
+
     .payment__list {
         flex-direction: row;
+    }
+
+    .payment_item {
+        background-size: 346px 145px;
     }
 
     .delivery__list {
@@ -2006,7 +2023,10 @@
 
     .delivery__item {
         padding-top: 152px;
-        background-position:  0 0;
+        background-position: 50% 0;
+        background-size: auto;
+
+
     }
 
     .delivery__item:nth-child(2) .delivery__info {
@@ -2015,7 +2035,33 @@
 
     .director__wrapper:last-child {
         flex: auto;
+        align-items: flex-start;
         margin-top: 0;
+        margin-left: 68px;
+    }
+
+    .director {
+        margin: 0;
+        padding-top: 66px;
+    }
+
+    .director__img {
+        margin-left: 62px;
+    }
+
+    .special-offer__section-title {
+        margin-bottom: 60px;
+    }
+
+    .box-dev__content {
+        padding: 120px 100px;
+        background-size: 551px 224px;
+        background-position: calc(100% - 81px) calc(50% + 96px);
+    }
+
+    .box-dev__sub-title {
+        width: 515px;
+        margin-top: 36px;
     }
 
     .footer__container {
@@ -2041,19 +2087,27 @@
     }
 
     .footer__nav_documentation {
-        padding-top: 20px;
+        /* padding-top: 20px; */
     }
 
     .footer__feedback {
         flex: 0;
         align-items: flex-end;
+        gap: 15px;
         width: max-content;
         margin: 0 auto 38px 0;
     }
 
     .footer__feedback_title {
         margin-top: 0;
+        margin-bottom: 0;
+        font-size: 24px;
+        font-weight: 700;
         line-height: 1;
+    }
+
+    .footer__feedback_title:nth-child(1) {
+        font-weight: 700;
     }
 
     .footer__feedback_button {
