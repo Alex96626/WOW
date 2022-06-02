@@ -87,9 +87,9 @@
         font-weight: 400;
         font-display: swap;
         src: local("Futura"),
-             url("fonts/Futura-PT_Demi.woff2") format("woff2"),
-             url("fonts/Futura-PT_Demi.woff") format("woff"),
-             url("fonts/Futura-PT_Demi.ttf") format("truetype");    
+             url("/assets/fonts/Futura-PT_Demi.woff2") format("woff2"),
+             url("/assets/fonts/Futura-PT_Demi.woff") format("woff"),
+             url("/assets/fonts/Futura-PT_Demi.ttf") format("truetype");    
     } 
     
     @font-face {
@@ -98,9 +98,9 @@
         font-weight: 400;
         font-display: swap;
         src: local("Calibri"),
-             url("fonts/calibri.woff2") format("woff2"),
-             url("fonts/calibri.woff") format("woff"),
-             url("fonts/calibri.ttf") format("truetype");    
+             url("/assets/fonts/calibri.woff2") format("woff2"),
+             url("/assets/fonts/calibri.woff") format("woff"),
+             url("/assets/fonts/calibri.ttf") format("truetype");    
     }
     
     @font-face {
@@ -109,9 +109,9 @@
         font-weight: 700;
         font-display: swap;
         src: 
-             url("fonts/calibri_bold.woff2") format("woff2"),
-             url("fonts/calibri_bold.woff") format("woff"),
-             url("fonts/calibri_bold.ttf") format("truetype");    
+             url("/assets/fonts/calibri_bold.woff2") format("woff2"),
+             url("/assets/fonts/calibri_bold.woff") format("woff"),
+             url("/assets/fonts/calibri_bold.ttf") format("truetype");    
     }
     
     body {
@@ -274,7 +274,7 @@
         height: 100%;
         right: -65px;
         top: 0;
-        background: url(images/grid.png) no-repeat;
+        background: url(/images/grid.png) no-repeat;
         z-index: -1;
     }
     
@@ -355,7 +355,7 @@
         position: relative;
         width: 24px;
         height: 24px;
-        background: url(images/tel.svg) 0% 0% no-repeat;
+        background: url(/images/tel.svg) 0% 0% no-repeat;
         background-size: cover;
         font-size: 0px;
     }
@@ -837,7 +837,7 @@
         padding-top:58px;
         border-radius: 20px;
         background-color: var(--white);
-        background-image: url(images/heart.svg);
+        background-image: url(/images/heart.svg);
         background-repeat: no-repeat;
         background-position: 50% calc((100% - 50px));
         visibility: hidden;    }
@@ -897,11 +897,11 @@
     }
 
     .payment_item:first-child {
-        background-image: url(images/payment-img2.png);
+        background-image: url(/images/payment-img2.png);
     }
 
     .payment_item:nth-child(2) {
-        background-image: url(images/payment-img1.png);
+        background-image: url(/images/payment-img1.png);
     }
 
     .payment__info {
@@ -938,11 +938,11 @@
     }
 
     .delivery__item:nth-child(1) {
-        background-image: url(images/delivery_img1.png);
+        background-image: url(/images/delivery_img1.png);
     }
 
     .delivery__item:nth-child(2) {
-        background-image: url(images/delivery_img2.png);
+        background-image: url(/images/delivery_img2.png);
     }
     
     .delivery__method {
@@ -1134,7 +1134,7 @@
     .box-dev__content {
         padding: 55px 40px 186px 40px;
         border-radius: var(--main-border-radius);
-        background: url(images/33-01\ 1.png) no-repeat, var(--light-grey) no-repeat calc(100% - 40px) center;
+        background: url(/images/33-01\ 1.png) no-repeat, var(--light-grey) no-repeat calc(100% - 40px) center;
         background-position: 50% calc(100% - 25px);
         background-size: 261px 124px;
     }
@@ -1532,7 +1532,7 @@
     /* banner  */
 
     .banner {
-        background: url(images/grid.png) no-repeat;
+        background: url(/images/grid.png) no-repeat;
         background-position: 50% 50px;
         background-size: 996px 772px;
     }
@@ -1585,7 +1585,7 @@
     }
 
     .service-nav:hover path {
-        fill: radial-gradient(circle, rgba(131,62,62,1) 52%, rgba(157,84,84,1) 100%);;
+        fill: #78263e;
     }
 
     
@@ -1640,7 +1640,7 @@
     }
 
     .hello-section {
-        background: url(images/grid.png) no-repeat;
+        background: url(/images/grid.png) no-repeat;
         background-position: 50% 0;
         background-size: 998px 772px;
     }
