@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     })
 
+    
     // отправка письма 
 
     const feedbackForm = document.querySelector('.feedback__form')
@@ -58,7 +59,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // slidera
-//    window.addEventListener('resize', () => {
         if(document.documentElement.clientWidth > 767) {
         
             var swiper = new Swiper(".services", {
@@ -108,11 +108,36 @@ document.addEventListener("DOMContentLoaded", () => {
                 } 
               });
         }
-    // })
-    
-   
 
 });
+
+// кнопка наверх
+    
+(function() {
+    const upButton = document.querySelector('.up');
+
+    function trackScroll() {
+      var scrolled = window.pageYOffset;
+      var coords = document.documentElement.clientHeight;
+  
+      if (scrolled > coords) {
+        upButton.classList.add('up--active');
+      }
+      if (scrolled < coords) {
+        upButton.classList.remove('up--active');
+      }
+    }
+  
+    function backToTop() {
+      if (window.pageYOffset > 0) {
+        window.scrollBy(0, -30);
+        setTimeout(backToTop, 0);
+      }
+    }
+
+    window.addEventListener('scroll', trackScroll);
+    upButton.addEventListener('click', backToTop);
+  })();
 
 
 

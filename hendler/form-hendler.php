@@ -12,8 +12,7 @@
 
 <?php
 	$back = "<p><a href=\"javascript: history.back()\">Вернуться назад</a></p>";
-    // var_dump($_GET);
-	// var_dump($_POST);
+
 	if(!empty($_GET['phone']) and !empty($_GET['mail'])){
 		$phone = trim(strip_tags($_GET['phone']));
 		$mail = trim(strip_tags($_GET['mail']));
@@ -29,15 +28,6 @@
 		echo 'Успех';
         
 	} 
-	// else {
-	// 	echo '!Успех';
-	// 	var_dump($_GET);
-	// 	var_dump($_POST);
-	// }
 
-    
 ?>
-<script>
-    // window.location.replace("https://wowmedia.pro/");
-    </script>
 </body>
